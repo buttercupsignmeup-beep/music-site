@@ -1,3 +1,4 @@
+/* General layout */
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
@@ -6,6 +7,7 @@ body {
   color: #333;
 }
 
+/* Header styling */
 header {
   background-color: #3e2f1c;
   color: #fff;
@@ -13,6 +15,17 @@ header {
   text-align: center;
 }
 
+header a {
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+header a:hover {
+  color: #ffd700;
+}
+
+/* Album section */
 .albums {
   display: flex;
   justify-content: center;
@@ -25,7 +38,7 @@ header {
   background-color: #fff;
   border: 1px solid #ccc;
   padding: 1rem;
-  width: 300px;
+  width: 320px;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
@@ -36,6 +49,19 @@ header {
   margin-bottom: 1rem;
 }
 
+.album-description {
+  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #444;
+  margin: 1rem 0;
+  background: #faf7f3;
+  padding: 1rem;
+  border-left: 4px solid #3e2f1c;
+  border-radius: 4px;
+}
+
+/* Streaming links section */
 .links {
   text-align: center;
   padding: 2rem;
@@ -50,6 +76,7 @@ header {
   margin: 0.5rem 0;
 }
 
+/* Link styling */
 a {
   color: #3e2f1c;
   text-decoration: none;
@@ -58,11 +85,19 @@ a {
 
 a:hover {
   text-decoration: underline;
+  color: #a0522d;
 }
 
+/* Footer */
 footer {
   background-color: #eee;
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
+}
+
+.note {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #555;
 }
