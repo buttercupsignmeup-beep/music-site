@@ -13,6 +13,8 @@ body {
   color: #222;
   line-height: 1.6;
   padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* ------------------------------
@@ -24,14 +26,14 @@ header {
 }
 
 header h1 {
-  font-size: 2.8rem;
+  font-size: 3rem;
   font-weight: 700;
   margin-bottom: 10px;
   color: #111;
 }
 
 header p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #444;
 }
 
@@ -50,9 +52,16 @@ header a:hover {
 --------------------------------*/
 .albums {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(2, 1fr); /* DESKTOP FIX */
   gap: 40px;
   margin-bottom: 50px;
+}
+
+/* Tablet layout */
+@media (max-width: 900px) {
+  .albums {
+    grid-template-columns: 1fr; /* One column on tablets */
+  }
 }
 
 .album {
@@ -75,13 +84,13 @@ header a:hover {
 }
 
 .album h2 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   margin-bottom: 10px;
   color: #111;
 }
 
 .album-description {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #333;
   margin-bottom: 15px;
 }
@@ -112,7 +121,7 @@ header a:hover {
 }
 
 .links h3 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin-bottom: 15px;
 }
 
@@ -126,7 +135,7 @@ header a:hover {
 
 .links a {
   color: #0066cc;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   text-decoration: none;
   font-weight: bold;
 }
@@ -153,7 +162,7 @@ footer .note {
 }
 
 /* ------------------------------
-   Responsive Tweaks
+   Mobile Tweaks
 --------------------------------*/
 @media (max-width: 600px) {
   header h1 {
@@ -165,7 +174,7 @@ footer .note {
   }
 
   .album-description {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 }
 
