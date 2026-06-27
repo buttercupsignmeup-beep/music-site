@@ -1,103 +1,170 @@
-/* General layout */
-body {
-  font-family: 'Segoe UI', sans-serif;
+/* ------------------------------
+   Global Reset & Base Styles
+--------------------------------*/
+* {
   margin: 0;
   padding: 0;
-  background-color: #fdf6f0;
-  color: #333;
+  box-sizing: border-box;
 }
 
-/* Header styling */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f7f7;
+  color: #222;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* ------------------------------
+   Header
+--------------------------------*/
 header {
-  background-color: #3e2f1c;
-  color: #fff;
-  padding: 2rem;
   text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #444;
 }
 
 header a {
-  color: #ffffff;
-  text-decoration: underline;
+  color: #0066cc;
   font-weight: bold;
+  text-decoration: none;
 }
 
 header a:hover {
-  color: #ffd700;
+  text-decoration: underline;
 }
 
-/* Album section */
+/* ------------------------------
+   Album Section
+--------------------------------*/
 .albums {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 2rem;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  margin-bottom: 50px;
 }
 
 .album {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 1rem;
-  width: 320px;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.album:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 
 .album img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 1rem;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.album h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #111;
 }
 
 .album-description {
-  text-align: left;
   font-size: 0.95rem;
-  line-height: 1.5;
-  color: #444;
-  margin: 1rem 0;
-  background: #faf7f3;
-  padding: 1rem;
-  border-left: 4px solid #3e2f1c;
-  border-radius: 4px;
+  color: #333;
+  margin-bottom: 15px;
 }
 
-/* Streaming links section */
+/* Album links */
+.album a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 16px;
+  background: #0066cc;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+.album a:hover {
+  background: #004c99;
+}
+
+/* ------------------------------
+   More Music Links
+--------------------------------*/
 .links {
   text-align: center;
-  padding: 2rem;
+  margin-bottom: 50px;
+}
+
+.links h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
 }
 
 .links ul {
   list-style: none;
-  padding: 0;
 }
 
 .links li {
-  margin: 0.5rem 0;
+  margin: 8px 0;
 }
 
-/* Link styling */
-a {
-  color: #3e2f1c;
+.links a {
+  color: #0066cc;
+  font-size: 1.1rem;
   text-decoration: none;
   font-weight: bold;
 }
 
-a:hover {
+.links a:hover {
   text-decoration: underline;
-  color: #a0522d;
 }
 
-/* Footer */
+/* ------------------------------
+   Footer
+--------------------------------*/
 footer {
-  background-color: #eee;
   text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+  color: #555;
 }
 
-.note {
-  margin-top: 0.5rem;
-  font-style: italic;
-  color: #555;
+footer .note {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 5px;
+}
+
+/* ------------------------------
+   Responsive Tweaks
+--------------------------------*/
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  .album {
+    padding: 15px;
+  }
+
+  .album-description {
+    font-size: 0.9rem;
+  }
 }
