@@ -168,3 +168,69 @@ footer .note {
     font-size: 0.9rem;
   }
 }
+
+/* -----------------------------------------
+   DARK MODE — Automatic (prefers-color-scheme)
+------------------------------------------*/
+@media (prefers-color-scheme: dark) {
+
+  body {
+    background: #111;
+    color: #e6e6e6;
+  }
+
+  header h1 {
+    color: #fff;
+  }
+
+  header p {
+    color: #ccc;
+  }
+
+  header a {
+    color: #4da3ff;
+  }
+
+  .album {
+    background: #1a1a1a;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+  }
+
+  .album:hover {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.75);
+  }
+
+  .album h2 {
+    color: #fff;
+  }
+
+  .album-description {
+    color: #ccc;
+  }
+
+  .album a {
+    background: #4da3ff;
+    color: #000;
+  }
+
+  .album a:hover {
+    background: #1f7bd6;
+  }
+
+  .links h3 {
+    color: #fff;
+  }
+
+  .links a {
+    color: #4da3ff;
+  }
+
+  footer {
+    border-top: 1px solid #333;
+    color: #aaa;
+  }
+
+  footer .note {
+    color: #888;
+  }
+}
